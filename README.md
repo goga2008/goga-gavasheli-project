@@ -5,7 +5,12 @@
 06:04 პროექტის არჩევა
 06:04 გვერდის სქემის შედგენა
 06:04 Github-ის რეპოზიტორის არჩევა
-07:04 
+07:04 სამუშაო გეგმის შედგენა
+07:04 vite-ის დაყენება
+07:04 TailwindCSS-ის დაყენება
+07:04 React Router-ის დაყენება
+07:04  საქაღალდეების დამატება
+07:04  პირველი კომიტი 
 
 ## 🛠️ ტექნოლოგიები
 
@@ -13,7 +18,7 @@
 - 🎨 Tailwind CSS
 - 🔀 React Router v6
 - 🔗 [API სახელი] — [API ლინკი]
-- 🤖 AI ხელსაწყო: [ChatGPT / Claude / Gemini]
+- 🤖 AI ხელსაწყო: [ Gemini]
 - 🐙 Git / GitHub
 
 ---
@@ -32,7 +37,7 @@
 ## 🚀 ინსტალაცია
 
 ```bash
-git clone https://github.com/[შენი-username]/[repo-name]
+git clone https://github.com/goga2008/goga-gavasheli-project
 cd [repo-name]
 npm install
 npm run dev
@@ -68,4 +73,4 @@ npm run dev
 
 ## 👤 ავტორი
 
-**[სახელი გვარი]** — [GitHub პროფილის ლინკი]
+**[გოგა გავაშელი]** — [https://github.com/goga2008]
