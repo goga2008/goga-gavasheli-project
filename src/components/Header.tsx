@@ -3,7 +3,8 @@ function Header(){
     return(
      <div className="bg-red  ">
       <div className="logo-container">
-         <img src="/public/logo.avif" alt="Logo" className="logo" />
+         <img src="/public/logo.avif" alt="Logo" className="logo" width={100} height={100}/> 
+         
          <h1> ონლაინ მაღაზია-oniom</h1>
       </div>
 
