@@ -1,8 +1,12 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import ProductCard from '../components/ProductCard';
 import { products, categories, brands, priceRanges, sortOptions } from '../data/Products';
 
 function Products() {
+  useEffect(() => {
+    document.title = 'Products| ჩემი საიტი';
+  }, []);
+
   const [selectedCategory, setSelectedCategory] = useState('ყველა');
   const [selectedBrands, setSelectedBrands] = useState<string[]>([]);
   const [selectedPriceRange, setSelectedPriceRange] = useState(0);

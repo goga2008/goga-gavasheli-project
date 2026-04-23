@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import Hero from '../components/Hero';
 import Section from '../components/Section';
 import Card from '../components/Card';
@@ -39,6 +40,10 @@ const serviceItems = [
 ];
 
 function Home() {
+  useEffect(() => {
+    document.title = 'Home| ჩემი საიტი';
+  }, []);
+
   return (
     <div>
       {/* Hero სექცია */}
