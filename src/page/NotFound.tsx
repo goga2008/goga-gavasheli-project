@@ -9,11 +9,10 @@ function NotFound() {
         სამწუხაროდ, მისამართი რომელსაც ეძებთ, არ არსებობს ან წაშლილია.
       </p>
       
-      {/* 🌟 ღილაკი მთავარ გვერდზე დასაბრუნებლად */}
       <Link 
         to="/" 
         style={{
-          padding: '10px 20px', backgroundColor: '#007bff', 
+          padding: '10px 20px', backgroundColor: '#406b99ff', 
           color: 'white', textDecoration: 'none', borderRadius: '5px'
         }}
       >

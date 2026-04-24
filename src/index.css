@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
-@tailwind utilities
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply text-sm md:text-base;
+  }
+}

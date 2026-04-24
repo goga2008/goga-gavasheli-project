@@ -51,7 +51,7 @@ function Home() {
 
       {/* პოპულარული კატეგორიები */}
       <Section id="categories" title="პოპულარული კატეგორიები">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {featuredItems.map((item, index) => (
             <Card
               key={index}
@@ -65,7 +65,7 @@ function Home() {
 
       {/* ჩვენი სერვისები */}
       <Section id="services" title="ჩვენი სერვისები" className="bg-gray-50">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {serviceItems.map((item, index) => (
             <Card
               key={index}

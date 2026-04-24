@@ -44,7 +44,7 @@ function About() {
 
       {/* მისია და ხედვა */}
       <Section id="mission" title="ჩვენი მისია" className="bg-gray-50">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 max-w-5xl mx-auto">
           <div className="bg-white rounded-xl shadow-md p-8">
             <div className="text-4xl mb-4">🎯</div>
             <h3 className="text-xl font-bold text-gray-900 mb-3">მისია</h3>
@@ -68,7 +68,7 @@ function About() {
 
       {/* გუნდი */}
       <Section id="team" title="ჩვენი გუნდი">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
           {[
             {
               name: 'ანა კვარაცხელია',
