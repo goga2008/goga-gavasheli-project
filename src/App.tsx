@@ -4,6 +4,9 @@ import Footer from "./components/Footer";
 import Home from "./page/Home";
 import Products from "./page/Products";
 import ScrollToTop from "./components/ScrollToTop";
+import About from "./page/About";
+import Contact from "./page/ContactForm";
+import NotFound from "./page/NotFound";
 
 
 function App(){
@@ -14,6 +17,9 @@ function App(){
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />}></Route>
+          <Route path="/contact" element={<Contact />}></Route>
+          <Route path="/*" element={<NotFound />}></Route>
           <Route path="/products" element={<Products />} />
         </Routes>
       </main>
