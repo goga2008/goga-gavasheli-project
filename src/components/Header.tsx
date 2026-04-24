@@ -14,16 +14,16 @@ function Header() {
 
         
         <nav className="hidden md:flex gap-6 items-center font-medium text-gray-600">
-          <NavLink to="/" className={({isActive}) => isActive ? "text-indigo-600" : "hover:text-indigo-500 transition-colors"}>მთავარი</NavLink>
-          <NavLink to="/products" className={({isActive}) => isActive ? "text-indigo-600" : "hover:text-indigo-500 transition-colors"}>პროდუქცია</NavLink>
-          <NavLink to="/cart" className={({isActive}) => isActive ? "text-indigo-600" : "hover:text-indigo-500 transition-colors"}>კალათა</NavLink>
-          <NavLink to="/login" className={({isActive}) => isActive ? "text-indigo-600" : "hover:text-indigo-500 transition-colors"}>შესვლა</NavLink>
-          <NavLink to="/regist" className={({isActive}) => isActive ? "text-indigo-600" : "hover:text-indigo-500 transition-colors"}>რეგისტრაცია</NavLink>
+          <NavLink to="/" className={({isActive}) => isActive ? "text-primary font-bold" : "hover:text-primary transition-colors duration-300"}>მთავარი</NavLink>
+          <NavLink to="/products" className={({isActive}) => isActive ? "text-primary font-bold" : "hover:text-primary transition-colors duration-300"}>პროდუქცია</NavLink>
+          <NavLink to="/cart" className={({isActive}) => isActive ? "text-primary font-bold" : "hover:text-primary transition-colors duration-300"}>კალათა</NavLink>
+          <NavLink to="/login" className={({isActive}) => isActive ? "text-primary font-bold" : "hover:text-primary transition-colors duration-300"}>შესვლა</NavLink>
+          <NavLink to="/regist" className={({isActive}) => isActive ? "text-primary font-bold" : "hover:text-primary transition-colors duration-300"}>რეგისტრაცია</NavLink>
         </nav>
 
         
         <button
-          className="md:hidden text-gray-600 hover:text-indigo-600 focus:outline-none p-2"
+          className="md:hidden text-gray-600 hover:text-primary focus:outline-none p-2"
           onClick={() => setIsOpen(!isOpen)}
           aria-label="მენიუ"
         >
@@ -42,11 +42,11 @@ function Header() {
       
       {isOpen && (
         <nav className="md:hidden bg-gray-50 border-t border-gray-100 flex flex-col px-4 py-4 gap-4 font-medium text-gray-700 shadow-inner">
-          <NavLink to="/" onClick={() => setIsOpen(false)} className={({isActive}) => isActive ? "text-indigo-600" : "hover:text-indigo-500 transition-colors"}>მთავარი</NavLink>
-          <NavLink to="/products" onClick={() => setIsOpen(false)} className={({isActive}) => isActive ? "text-indigo-600" : "hover:text-indigo-500 transition-colors"}>პროდუქცია</NavLink>
-          <NavLink to="/cart" onClick={() => setIsOpen(false)} className={({isActive}) => isActive ? "text-indigo-600" : "hover:text-indigo-500 transition-colors"}>კალათა</NavLink>
-          <NavLink to="/login" onClick={() => setIsOpen(false)} className={({isActive}) => isActive ? "text-indigo-600" : "hover:text-indigo-500 transition-colors"}>შესვლა</NavLink>
-          <NavLink to="/regist" onClick={() => setIsOpen(false)} className={({isActive}) => isActive ? "text-indigo-600" : "hover:text-indigo-500 transition-colors"}>რეგისტრაცია</NavLink>
+          <NavLink to="/" onClick={() => setIsOpen(false)} className={({isActive}) => isActive ? "text-primary font-bold" : "hover:text-primary transition-colors duration-300"}>მთავარი</NavLink>
+          <NavLink to="/products" onClick={() => setIsOpen(false)} className={({isActive}) => isActive ? "text-primary font-bold" : "hover:text-primary transition-colors duration-300"}>პროდუქცია</NavLink>
+          <NavLink to="/cart" onClick={() => setIsOpen(false)} className={({isActive}) => isActive ? "text-primary font-bold" : "hover:text-primary transition-colors duration-300"}>კალათა</NavLink>
+          <NavLink to="/login" onClick={() => setIsOpen(false)} className={({isActive}) => isActive ? "text-primary font-bold" : "hover:text-primary transition-colors duration-300"}>შესვლა</NavLink>
+          <NavLink to="/regist" onClick={() => setIsOpen(false)} className={({isActive}) => isActive ? "text-primary font-bold" : "hover:text-primary transition-colors duration-300"}>რეგისტრაცია</NavLink>
         </nav>
       )}
     </header>

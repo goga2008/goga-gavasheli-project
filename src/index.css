@@ -4,6 +4,6 @@
 
 @layer base {
   html {
-    @apply text-sm md:text-base;
+    @apply text-sm md:text-base scroll-smooth;
   }
 }

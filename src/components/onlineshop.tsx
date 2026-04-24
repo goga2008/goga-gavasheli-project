@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-// FakeStore API-დან წამოსული მონაცემების ტიპი
+
 interface FakeStoreProduct {
     id: number;
     title: string;
@@ -66,7 +66,7 @@ export default function OnlineShop() {
         );
     }
 
-    // წარმატებით ჩატვირთული მონაცემების გამოჩენა
+    
     return (
         <div className="container mx-auto px-4 py-12">
             <h1 className="text-3xl font-extrabold text-gray-800 mb-10 text-center">
@@ -77,7 +77,7 @@ export default function OnlineShop() {
                 {items.map((item) => (
                     <div
                         key={item.id}
-                        className="bg-white rounded-2xl  border border-gray-100 overflow-hidden hover:shadow-xl flex flex-col group"
+                        className="bg-white rounded-2xl border border-gray-100 overflow-hidden flex flex-col group hover:shadow-xl hover:scale-105 transition-all duration-300"
                     >
                         <div className="h-56 p-6 bg-white flex items-center justify-center relative overflow-hidden">
                             <img

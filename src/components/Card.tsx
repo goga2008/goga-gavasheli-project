@@ -8,7 +8,7 @@ interface CardProps {
 
 const Card: React.FC<CardProps> = ({ title, image, description }) => {
   return (
-    <div className="max-w-sm rounded overflow-hidden  bg-white border border-gray-200 transition-transform hover:scale-105">
+    <div className="max-w-sm rounded overflow-hidden bg-white border border-gray-200 hover:shadow-xl hover:scale-105 transition-all duration-300">
       <img 
         className="w-full h-48 object-cover" 
         src={image} 
@@ -26,7 +26,7 @@ const Card: React.FC<CardProps> = ({ title, image, description }) => {
       </div>
 
       <div className="px-6 pt-4 pb-2">
-        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-full">
+        <button className="bg-primary text-white font-bold py-2 px-4 rounded w-full hover:brightness-110 active:scale-95 transition-all duration-300">
            ონლაინ დეტალები
         </button>
       </div>
