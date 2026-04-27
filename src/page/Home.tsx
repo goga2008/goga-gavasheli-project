@@ -46,10 +46,10 @@ function Home() {
 
   return (
     <div>
-      {/* Hero სექცია */}
+      
       <Hero />
 
-      {/* პოპულარული კატეგორიები */}
+      
       <Section id="categories" title="პოპულარული კატეგორიები">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {featuredItems.map((item, index) => (

@@ -15,7 +15,7 @@ function Hero() {
 
       
       <div className="hero-image">
-        <img src="" alt="Tech Banner" />
+        <img src="" alt="onlain shop" />
       </div>
 
     </section>

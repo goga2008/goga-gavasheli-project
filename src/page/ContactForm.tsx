@@ -97,7 +97,7 @@ function Contact() {
 
       
       <p style={{ textAlign: 'center', marginTop: '15px', fontSize: '14px' }}>
-        თქვენი ანგარიშია? <Link to="/register">დარეგისტრირდით</Link>
+         თქვენი ანგარიშია? <Link to="/conect">დარეგისტრირდით</Link>
       </p>
 
     </div>

@@ -16,9 +16,9 @@ function Header() {
         <nav className="hidden md:flex gap-6 items-center font-medium text-gray-600">
           <NavLink to="/" className={({isActive}) => isActive ? "text-primary font-bold" : "hover:text-primary transition-colors duration-300"}>მთავარი</NavLink>
           <NavLink to="/products" className={({isActive}) => isActive ? "text-primary font-bold" : "hover:text-primary transition-colors duration-300"}>პროდუქცია</NavLink>
-          <NavLink to="/cart" className={({isActive}) => isActive ? "text-primary font-bold" : "hover:text-primary transition-colors duration-300"}>კალათა</NavLink>
-          <NavLink to="/login" className={({isActive}) => isActive ? "text-primary font-bold" : "hover:text-primary transition-colors duration-300"}>შესვლა</NavLink>
-          <NavLink to="/regist" className={({isActive}) => isActive ? "text-primary font-bold" : "hover:text-primary transition-colors duration-300"}>რეგისტრაცია</NavLink>
+          <NavLink to="/kal" className={({isActive}) => isActive ? "text-primary font-bold" : "hover:text-primary transition-colors duration-300"}>კალათა</NavLink>
+         
+          <NavLink to="/conect" className={({isActive}) => isActive ? "text-primary font-bold" : "hover:text-primary transition-colors duration-300"}>რეგისტრაცია</NavLink>
         </nav>
 
         
@@ -44,9 +44,8 @@ function Header() {
         <nav className="md:hidden bg-gray-50 border-t border-gray-100 flex flex-col px-4 py-4 gap-4 font-medium text-gray-700 shadow-inner">
           <NavLink to="/" onClick={() => setIsOpen(false)} className={({isActive}) => isActive ? "text-primary font-bold" : "hover:text-primary transition-colors duration-300"}>მთავარი</NavLink>
           <NavLink to="/products" onClick={() => setIsOpen(false)} className={({isActive}) => isActive ? "text-primary font-bold" : "hover:text-primary transition-colors duration-300"}>პროდუქცია</NavLink>
-          <NavLink to="/cart" onClick={() => setIsOpen(false)} className={({isActive}) => isActive ? "text-primary font-bold" : "hover:text-primary transition-colors duration-300"}>კალათა</NavLink>
-          <NavLink to="/login" onClick={() => setIsOpen(false)} className={({isActive}) => isActive ? "text-primary font-bold" : "hover:text-primary transition-colors duration-300"}>შესვლა</NavLink>
-          <NavLink to="/regist" onClick={() => setIsOpen(false)} className={({isActive}) => isActive ? "text-primary font-bold" : "hover:text-primary transition-colors duration-300"}>რეგისტრაცია</NavLink>
+          <NavLink to="/kal" onClick={() => setIsOpen(false)} className={({isActive}) => isActive ? "text-primary font-bold" : "hover:text-primary transition-colors duration-300"}>კალათა</NavLink>
+          <NavLink to="/conect" onClick={() => setIsOpen(false)} className={({isActive}) => isActive ? "text-primary font-bold" : "hover:text-primary transition-colors duration-300"}>რეგისტრაცია</NavLink>
         </nav>
       )}
     </header>

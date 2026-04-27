@@ -4,7 +4,7 @@ function Footer() {
       <div className="footer-container">
 
         
-        <p>© 2026 Tech Shop. ყველა უფლება დაცულია.</p>
+        <p>© 2026 Onlain Shop. ყველა უფლება დაცულია.</p>
         
         
         <div className="social-links">

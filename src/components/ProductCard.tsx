@@ -1,5 +1,6 @@
 import React from 'react';
 import type { Product } from '../types';
+import {Link} from 'react-router-dom'
 
 interface ProductCardProps {
   product: Product;
@@ -68,7 +69,14 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
         <h3 className="font-bold text-gray-800 text-lg leading-tight mb-2 group-hover:text-indigo-600 transition-colors duration-300 line-clamp-2">
           {product.name}
         </h3>
-
+          <div className="flex justify-between text-lg font-bold text-gray-900 mb-1">
+              <h3>
+                 <Link to={`/products`} className="hover:text-indigo-600 transition-colors">
+                      {product.name}
+                 </Link>
+              </h3>   
+          </div>                 
+       
         {/* Rating */}
         <div className="flex items-center gap-1.5 mb-3">
           <div className="flex items-center">
