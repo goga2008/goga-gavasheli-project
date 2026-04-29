@@ -74,7 +74,7 @@ export default function Cart() {
                           <div>
                             <div className="flex justify-between text-lg font-bold text-gray-900 mb-1">
                               <h3>
-                                <Link to={`/kal`} className="hover:text-indigo-600 transition-colors">
+                                <Link to={`/details/${item.id}`} className="hover:text-indigo-600 transition-colors">
                                   {item.name}
                                 </Link>
                               </h3>
@@ -138,6 +138,7 @@ export default function Cart() {
 
                 <button
                   type="button"
+                  onClick={() => alert('შეკვეთა წარმატებით გაფორმდა!')}
                   className="w-full flex items-center justify-center rounded-2xl bg-gradient-to-r from-indigo-500 to-purple-600 px-6 py-4 text-base font-bold text-white shadow-lg shadow-indigo-200 hover:from-indigo-600 hover:to-purple-700 transition-all transform hover:-translate-y-0.5"
                 >
                   ყიდვის გაგრძელება
@@ -146,7 +147,7 @@ export default function Cart() {
                 <div className="mt-6 text-center text-sm text-gray-500">
                   <p>
                     ან{' '}
-                    <Link to="/kal" className="font-semibold text-indigo-600 hover:text-indigo-500 transition-colors">
+                    <Link to="/products" className="font-semibold text-indigo-600 hover:text-indigo-500 transition-colors">
                       გააგრძელე შოპინგი
                       <span aria-hidden="true"> &rarr;</span>
                     </Link>
@@ -167,7 +168,7 @@ export default function Cart() {
               დაამატეთ სასურველი პროდუქტები კალათაში და გააფორმეთ შეკვეთა მარტივად.
             </p>
             <Link
-              to="/kal"
+              to="/products"
               className="inline-flex items-center justify-center rounded-2xl bg-indigo-600 px-8 py-4 text-sm font-bold text-white shadow-lg shadow-indigo-200 hover:bg-indigo-700 transition-all transform hover:-translate-y-0.5"
             >
               პროდუქტების ნახვა

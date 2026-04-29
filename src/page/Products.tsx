@@ -1,6 +1,7 @@
 import { useState, useMemo, useEffect } from 'react';
 import ProductCard from '../components/ProductCard';
 import { products, categories, brands, priceRanges, sortOptions } from '../data/Products';
+import { Link } from 'react-router-dom';
 
 function Products() {
   useEffect(() => {
@@ -93,9 +94,15 @@ function Products() {
           <h1 className="text-3xl md:text-5xl font-extrabold text-white mb-3 tracking-tight">
             პროდუქცია
           </h1>
-          <p className="text-indigo-100 text-lg max-w-2xl">
+          <p className="text-indigo-100 text-lg max-w-2xl mb-6">
             აღმოაჩინეთ უახლესი ტექნოლოგიური პროდუქტები საუკეთესო ფასებით
           </p>
+          <Link
+            to="/onlineshop"
+            className="inline-block bg-white text-indigo-600 px-6 py-3 rounded-xl font-bold shadow-lg hover:bg-indigo-50 transition-all hover:scale-105"
+          >
+            Online Shop-ის კატალოგი
+          </Link>
 
           {/* Search Bar */}
           <div className="mt-8 max-w-xl relative">
@@ -307,7 +314,9 @@ function Products() {
                 )}
               </div>
             )}
-
+             <div>
+                 
+             </div>
             {/* Product Grid */}
             {filteredProducts.length > 0 ? (
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

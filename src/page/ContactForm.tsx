@@ -1,76 +1,57 @@
-import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-
-// 🌟 ტიპი ფორმისთვის
-interface ContactForm {
-  email: string;
-  password: string;
-}
+import { useFormik } from 'formik';
+import * as yup from 'yup';
 
 function Contact() {
   const navigate = useNavigate();
 
-  const [form, setForm] = useState<ContactForm>({
-    email: '',
-    password: ''
+  const formik = useFormik({
+    initialValues: {name: "" , email:"", password:""},
+    validationSchema: yup.object({
+      name: yup.string().required('სახელი სავალდებულოა'),
+      email: yup.string().email('არასწორი ელ-ფოსტა').required('ელ-ფოსტა სავალდებულოა'),
+      password: yup.string().min(10, 'პაროლი უნდა შეიცავდეს მინიმუმ 10 სიმბოლოს').required('პაროლი სავალდებულოა'),
+    }),
+    onSubmit: (values) => {
+      console.log(values);
+      alert('წარმატებით გაიგზავნა!');
+      navigate('/');
+    }
   });
-
-  const [errors, setErrors] = useState<Partial<ContactForm>>({});
-
-  // ✅ ვალიდაცია
-  const validate = (): boolean => {
-    const newErrors: Partial<ContactForm> = {};
-
-    if (!form.email) {
-      newErrors.email = "ელ-ფოსტა სავალდებულოა!";
-    } else if (!/[^\s@]+$/.test(form.email)) {
-      newErrors.email = "არასწორი ელ-ფოსტის ფორმატი";
-    }
-
-    if (!form.password) {
-      newErrors.password = "პაროლი სავალდებულოა!";
-    } else if (form.password.length < 6) {
-      newErrors.password = "პაროლი უნდა შეიცავდეს მინიმუმ 6 სიმბოლოს";
-    }
-
-    setErrors(newErrors);
-    return Object.keys(newErrors).length === 0;
-  };
-
-  // ✅ ინფუთის ცვლილების ჰენდლერი
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target;
-    setForm(prev => ({ ...prev, [name]: value }));
-  };
-
-  // ✅ ფორმის გაგზავნა
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (validate()) {
-      console.log("მომხმარებელი შევიდა", form);
-      alert("ავტორიზაცია წარმატებულია");
-      navigate("/");
-    }
-  };
-
   return (
     <div style={{ maxWidth: '400px', margin: '50px auto', padding: '20px',
       border: '1px solid #ccc', borderRadius: '10px' }}>
       <h2 style={{ textAlign: 'center' }}>ავტორიზაცია</h2>
 
-      <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '13px' }}>
+      <form onSubmit={formik.handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '13px' }}>
+
+        <div style={{ display: 'flex', flexDirection: 'column' }}>
+          <label>სახელი:</label>
+          <input
+            type="text"
+            name="name"
+            value={formik.values.name}
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+            style={{ padding: '8px', marginTop: '5px', borderRadius: '13px', border: '1px solid #ccc' }}
+          />
+          {formik.touched.name && formik.errors.name && (
+            <div style={{ color: 'red', fontSize: '12px', marginTop: '5px' }}>{formik.errors.name}</div>
+          )}
+        </div>
 
         <div style={{ display: 'flex', flexDirection: 'column' }}>
           <label>ელ-ფოსტა:</label>
           <input
             type="email"
             name="email"
-            value={form.email}
-            onChange={handleChange}
+            value={formik.values.email}
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
             style={{ padding: '8px', marginTop: '5px', borderRadius: '13px', border: '1px solid #ccc' }}
           />
-          {errors.email && (
-            <div style={{ color: 'red', fontSize: '12px', marginTop: '5px' }}>{errors.email}</div>
+          {formik.touched.email && formik.errors.email && (
+            <div style={{ color: 'red', fontSize: '12px', marginTop: '5px' }}>{formik.errors.email}</div>
           )}
         </div>
 
@@ -79,12 +60,13 @@ function Contact() {
           <input
             type="password"
             name="password"
-            value={form.password}
-            onChange={handleChange}
+            value={formik.values.password}
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
             style={{ padding: '6px', marginTop: '5px', border: '1px solid #ccc', borderRadius: '5px' }}
           />
-          {errors.password && (
-            <div style={{ color: 'red', fontSize: '12px', marginTop: '5px' }}>{errors.password}</div>
+          {formik.touched.password && formik.errors.password && (
+            <div style={{ color: 'red', fontSize: '12px', marginTop: '5px' }}>{formik.errors.password}</div>
           )}
         </div>
 

@@ -40,8 +40,8 @@ const MainLayout: React.FC<LayoutProps> = ({ children }) => {
             </ul>
           </div>
           <div>
-            <h3 className="font-bold mb-2">Contact</h3>
-            <p className="text-sm text-gray-400">Email: info@mystore.com</p>
+            <h3 className="font-bold mb-2">სოციალური გვერდები</h3>
+            <p className="text-sm text-gray-400">ელ-ფოსტა: info@mystore.com</p>
           </div>
         </div>
       </footer>
