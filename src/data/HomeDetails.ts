@@ -3,7 +3,7 @@ export interface HomeItem {
   title: string;
   image: string;
   description: string;
-  details: string; // მომხმარებელს შეუძლია დაარედაქტიროს ეს ველი
+  details: string; 
 }
 
 export const featuredItems: HomeItem[] = [

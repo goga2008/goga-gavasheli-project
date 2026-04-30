@@ -25,21 +25,21 @@ function Products() {
   const filteredProducts = useMemo(() => {
     let result = [...products];
 
-    // Category filter
+    
     if (selectedCategory !== 'ყველა') {
       result = result.filter((p) => p.category === selectedCategory);
     }
 
-    // Brand filter
+    
     if (selectedBrands.length > 0) {
       result = result.filter((p) => selectedBrands.includes(p.brand));
     }
 
-    // Price filter
+   
     const range = priceRanges[selectedPriceRange];
     result = result.filter((p) => p.price >= range.min && p.price <= range.max);
 
-    // Search filter
+  
     if (searchQuery.trim()) {
       const q = searchQuery.toLowerCase();
       result = result.filter(
@@ -105,7 +105,7 @@ function Products() {
             Online Shop-ის კატალოგი
           </Link>
 
-          {/* Search Bar */}
+          
           <div className="mt-8 max-w-xl relative">
             <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
               <svg className="h-5 w-5 text-indigo-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
