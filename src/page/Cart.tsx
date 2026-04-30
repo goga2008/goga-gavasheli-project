@@ -18,7 +18,7 @@ export default function Cart() {
     window.scrollTo(0, 0);
   }, [location]);
 
-  // სატესტოდ ვიყენებთ პირველ და მეხუთე პროდუქტს მონაცემთა ბაზიდან
+ 
   const [cartItems, setCartItems] = useState<CartItem[]>([
     { ...products[0], quantity: 1 },
     { ...products[4], quantity: 2 },
@@ -44,7 +44,7 @@ export default function Cart() {
 
   return (
     <div className="min-h-screen bg-slate-50 pb-20">
-      {/* Header gradient area */}
+      
       <div className="bg-gradient-to-r from-indigo-600 via-purple-600 to-indigo-800 pb-32 pt-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl font-extrabold text-white tracking-tight mb-4">თქვენი კალათა</h1>
@@ -55,7 +55,7 @@ export default function Cart() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-24">
         {cartItems.length > 0 ? (
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
-            {/* Cart Items */}
+            
             <div className="lg:col-span-8 space-y-6">
               <div className="bg-white rounded-3xl shadow-xl shadow-indigo-100/50 p-6 md:p-8 overflow-hidden">
                 <div className="flow-root">
@@ -116,7 +116,7 @@ export default function Cart() {
               </div>
             </div>
 
-            {/* Order Summary */}
+           
             <div className="lg:col-span-4">
               <div className="bg-white rounded-3xl shadow-xl shadow-indigo-100/50 p-6 md:p-8 sticky top-24">
                 <h2 className="text-xl font-extrabold text-gray-900 mb-6">შეკვეთის დეტალები</h2>

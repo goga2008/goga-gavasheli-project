@@ -52,18 +52,19 @@ function Products() {
 
     
     switch (sortBy) {
-      case 'ფასის ზრდა':
+      case 'price-asc':
         result.sort((a, b) => a.price - b.price);
         break;
-      case 'ფასის კლებადობა':
+      case 'price-desc':
         result.sort((a, b) => b.price - a.price);
         break;
-      case 'შეფასება':
+      case 'rating':
         result.sort((a, b) => b.rating - a.rating);
         break;
-      case 'სულ ახალი':
+      case 'newest':
         result.sort((a, b) => (b.isNew ? 1 : 0) - (a.isNew ? 1 : 0));
         break;
+      case 'popular':
       default:
         result.sort((a, b) => b.reviewCount - a.reviewCount);
     }
@@ -76,7 +77,7 @@ function Products() {
     setSelectedBrands([]);
     setSelectedPriceRange(0);
     setSearchQuery('');
-    setSortBy('ყველაზე რეინტიგული ');
+    setSortBy('popular');
   };
 
   const hasActiveFilters =
@@ -123,7 +124,7 @@ function Products() {
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl py-8">
-        {/* Mobile Filter Toggle */}
+        
         <button
           onClick={() => setShowMobileFilter(!showMobileFilter)}
           className="lg:hidden w-full mb-6 flex items-center justify-center gap-2 bg-white border border-gray-200 rounded-xl py-3 px-4 text-gray-700 font-semibold shadow-sm hover:shadow-md transition-all"
@@ -141,10 +142,10 @@ function Products() {
         </button>
 
         <div className="flex gap-8">
-          {/* Sidebar Filters */}
+          
           <aside className={`${showMobileFilter ? 'block' : 'hidden'} lg:block w-full lg:w-72 flex-shrink-0`}>
             <div className="bg-white rounded-2xl  border-gray-100 p-6 sticky top-6 space-y-7">
-              {/* Filter Header */}
+              
               <div className="flex items-center justify-between">
                 <h2 className="text-lg font-bold text-gray-800 flex items-center gap-2">
                   <svg className="w-5 h-5 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -162,7 +163,7 @@ function Products() {
                 )}
               </div>
 
-              {/* Categories */}
+             
               <div>
                 <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-3">
                   კატეგორიები
@@ -184,7 +185,7 @@ function Products() {
                 </div>
               </div>
 
-              {/* Price Range */}
+              
               <div>
                 <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-3">
                   ფასის დიაპაზონი
@@ -206,7 +207,7 @@ function Products() {
                 </div>
               </div>
 
-              {/* Brands */}
+              
               <div>
                 <h3 >
                   ბრენდები
@@ -250,9 +251,9 @@ function Products() {
             </div>
           </aside>
 
-          {/* Main Content */}
+          
           <div className="flex-1 min-w-0">
-            {/* Toolbar */}
+            
             <div className="flex flex-col sm:flex-row items-start items-center justify-between gap-4 mb-6">
               <p className="text-gray-500 font-medium">
                 ნაპოვნია <span className="text-indigo-600 font-bold">{filteredProducts.length}</span> პროდუქტი
@@ -279,7 +280,7 @@ function Products() {
               </div>
             </div>
 
-            {/* Active Filters Tags */}
+            
             {hasActiveFilters && (
               <div className="flex flex-wrap gap-2 mb-6">
                 {selectedCategory !== 'ყველა' && (
@@ -317,7 +318,7 @@ function Products() {
              <div>
                  
              </div>
-            {/* Product Grid */}
+           
             {filteredProducts.length > 0 ? (
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {filteredProducts.map((product) => (

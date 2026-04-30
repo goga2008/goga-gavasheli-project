@@ -17,7 +17,7 @@ function About() {
           
           <div className="flex-shrink-0">
             <img
-              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=350&h=350&fit=crop&crop=face"
+              src="public/photo-2d.webp"
               alt="დამფუძნებელი"
               className="w-64 h-64 rounded-full object-cover shadow-xl border-4 border-blue-500"
             />
@@ -25,7 +25,7 @@ function About() {
 
         
           <div className="text-center md:text-left">
-            <h3 className="text-2xl font-bold text-gray-900 mb-2">გოგა გავაშელი</h3>
+            <h3 className="text-2xl font-bold text-gray-900 mb-2">გოგა გავაშელი(ჩემი სურათი არ არის)</h3>
             <p className="text-blue-600 font-semibold mb-4">დამფუძნებელი & CEO</p>
             <p className="text-gray-600 leading-relaxed mb-4">
               გოგა გავაშელი არის ტექნოლოგიური ინდუსტრიის ენთუზიასტი, რომელმაც
@@ -42,11 +42,11 @@ function About() {
         </div>
       </Section>
 
-      {/* მისია და ხედვა */}
+      
       <Section id="mission" title="ჩვენი მისია" className="bg-gray-50">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 max-w-5xl mx-auto">
           <div className="bg-white rounded-xl shadow-md p-8">
-            <div className="text-4xl mb-4">🎯</div>
+            
             <h3 className="text-xl font-bold text-gray-900 mb-3">მისია</h3>
             <p className="text-gray-600 leading-relaxed">
               ჩვენი მისია არის მაღალი ხარისხის ტექნოლოგიური პროდუქტების
@@ -55,7 +55,7 @@ function About() {
             </p>
           </div>
           <div className="bg-white rounded-xl shadow-md p-8">
-            <div className="text-4xl mb-4">🔭</div>
+            
             <h3 className="text-xl font-bold text-gray-900 mb-3">ხედვა</h3>
             <p className="text-gray-600 leading-relaxed">
               ჩვენი ხედვა არის გავხდეთ საქართველოში #1 ონლაინ ტექნოლოგიური
@@ -66,26 +66,26 @@ function About() {
         </div>
       </Section>
 
-      {/* გუნდი */}
+      
       <Section id="team" title="ჩვენი გუნდი">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
           {[
             {
               name: 'ანა კვარაცხელია',
               role: 'მარკეტინგის მენეჯერი',
-              image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=300&h=300&fit=crop&crop=face',
+              image: 'public/photo-1gg.webp',
               bio: 'ციფრული მარკეტინგის ექსპერტი 4 წლიანი გამოცდილებით.',
             },
             {
               name: 'ლუკა ჯანელიძე',
               role: 'ტექნიკური დირექტორი',
-              image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop&crop=face',
+              image: 'public/photo-1s.webp',
               bio: 'Full-stack დეველოპერი, ტექნოლოგიური გადაწყვეტილებების არქიტექტორი.',
             },
             {
               name: 'მარიამ ბერიძე',
               role: 'კლიენტების მომსახურება',
-              image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300&h=300&fit=crop&crop=face',
+              image: 'public/photo-1g.webp',
               bio: 'კლიენტებთან ურთიერთობის სპეციალისტი, ყოველთვის მზადაა დასახმარებლად.',
             },
           ].map((member, index) => (

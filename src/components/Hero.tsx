@@ -34,26 +34,17 @@ function Hero() {
           </div>
           
           <div className="relative mx-auto w-full max-w-lg lg:max-w-none mt-8 lg:mt-0">
-            {/* Decorative background blob */}
+            
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-gradient-to-tr from-indigo-300 to-purple-300 rounded-full blur-[80px] opacity-40 -z-10"></div>
             
             <img 
-              src="https://images.unsplash.com/photo-1498049794561-7780e7231661?auto=format&fit=crop&w=800&q=80" 
+              src="public/photo-M.webp" 
               alt="თანამედროვე ტექნიკა" 
               className="w-full rounded-3xl shadow-2xl border-4 border-white/80 object-cover lg:-rotate-2 hover:rotate-0 transition-transform duration-500"
             />
             
-            {/* Floating badge */}
-            <div className="absolute -bottom-6 -left-6 lg:bottom-10 lg:-left-10 bg-white p-4 rounded-2xl shadow-xl border border-gray-100 flex items-center gap-4 animate-bounce" style={{ animationDuration: '3s' }}>
-              <div className="bg-emerald-100 p-3 rounded-full text-emerald-600">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-              </div>
-              <div>
-                <p className="text-sm font-extrabold text-gray-900">გარანტირებული</p>
-                <p className="text-xs text-gray-500 font-medium">უმაღლესი ხარისხი</p>
-              </div>
+            
+            <div className="absolute -bottom-6 -left-6 lg:bottom-10 lg:-left-10 bg-white p-4 rounded-2xl  border border-gray-100 flex items-center gap-4 animate-bounce" style={{ animationDuration: '3s' }}>
             </div>
           </div>
           

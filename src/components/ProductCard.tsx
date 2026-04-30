@@ -46,7 +46,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
             </span>
           </div>
         )}
-        {/* Quick Add Button */}
+        
         <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out">
           <Link to="/kal" className="w-full block">
             <button
@@ -62,9 +62,9 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
         </div>
       </div>
 
-      {/* Content */}
+     
       <div className="p-5">
-        {/* Brand */}
+        
         <p className="text-xs font-semibold text-indigo-500 uppercase tracking-wider mb-1">
           {product.brand}
         </p>
@@ -75,7 +75,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
           </h3>
         </Link>              
        
-        {/* Rating */}
+       
         <div className="flex items-center gap-1.5 mb-3">
           <div className="flex items-center">
             {[...Array(5)].map((_, i) => (
@@ -94,7 +94,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
           </span>
         </div>
        
-        {/* Price */}
+        
         <div className="flex items-end gap-2">
           <span className="text-2xl font-extrabold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
             {product.price} ₾
