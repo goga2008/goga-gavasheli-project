@@ -17,7 +17,7 @@ function About() {
           
           <div className="flex-shrink-0">
             <img
-              src="public/photo-2d.webp"
+              src="/photo-2d.webp"
               alt="დამფუძნებელი"
               className="w-64 h-64 rounded-full object-cover shadow-xl border-4 border-blue-500"
             />
@@ -73,19 +73,19 @@ function About() {
             {
               name: 'ანა კვარაცხელია',
               role: 'მარკეტინგის მენეჯერი',
-              image: 'public/photo-1gg.webp',
+              image: '/photo-1gg.webp',
               bio: 'ციფრული მარკეტინგის ექსპერტი 4 წლიანი გამოცდილებით.',
             },
             {
               name: 'ლუკა ჯანელიძე',
               role: 'ტექნიკური დირექტორი',
-              image: 'public/photo-1s.webp',
+              image: '/photo-1s.webp',
               bio: 'Full-stack დეველოპერი, ტექნოლოგიური გადაწყვეტილებების არქიტექტორი.',
             },
             {
               name: 'მარიამ ბერიძე',
               role: 'კლიენტების მომსახურება',
-              image: 'public/photo-1g.webp',
+              image: '/photo-1g.webp',
               bio: 'კლიენტებთან ურთიერთობის სპეციალისტი, ყოველთვის მზადაა დასახმარებლად.',
             },
           ].map((member, index) => (

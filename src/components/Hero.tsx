@@ -38,7 +38,7 @@ function Hero() {
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-gradient-to-tr from-indigo-300 to-purple-300 rounded-full blur-[80px] opacity-40 -z-10"></div>
             
             <img 
-              src="public/photo-M.webp" 
+              src="/photo-M.webp" 
               alt="თანამედროვე ტექნიკა" 
               className="w-full rounded-3xl shadow-2xl border-4 border-white/80 object-cover lg:-rotate-2 hover:rotate-0 transition-transform duration-500"
             />
