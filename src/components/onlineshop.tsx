@@ -18,7 +18,7 @@ export default function OnlineShop() {
                     >
                         <div className="h-56 p-6 bg-white flex items-center justify-center relative overflow-hidden">
                             <img
-                                src={`/${item.image}`}
+                                src={item.image}
                                 alt={item.name}
                                 className="max-h-full max-w-full object-contain group-hover:scale-110 transition-transform duration-500"
                             />
