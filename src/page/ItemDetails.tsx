@@ -31,7 +31,7 @@ export default function ItemDetails() {
             <img 
             src={item.image} 
             alt={item.title} 
-            className="w-full h-64 md:h-full object-cover"
+            className="w-full h-156 md:h-[700px] object-cover"
             />
         </div>
         <div className="p-8 md:p-12 md:w-3/5 flex flex-col justify-center">

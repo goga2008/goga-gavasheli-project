@@ -137,7 +137,7 @@ function Footer() {
                 </div>
                 <div>
                   <a href="tel:+995555123456" className="text-sm text-gray-400 hover:text-indigo-400 transition-colors duration-300">
-                    +995 555 123 456
+                    +995 555 25 45 89
                   </a>
                 </div>
               </li>

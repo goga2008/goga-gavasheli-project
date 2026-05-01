@@ -1,4 +1,4 @@
-import { Link, useNavigate } from 'react-router-dom';
+import {  useNavigate } from 'react-router-dom';
 import { useFormik } from 'formik';
 import * as yup from 'yup';
 
@@ -78,9 +78,7 @@ function Contact() {
       </form>
 
       
-      <p style={{ textAlign: 'center', marginTop: '15px', fontSize: '14px' }}>
-         თქვენი ანგარიშია? <Link to="/conect">დარეგისტრირდით</Link>
-      </p>
+     
 
     </div>
   )
